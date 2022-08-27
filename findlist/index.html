@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:wght@500;700&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/main.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <!-- wrapper start
+    =========================================== -->
+    <div class="wrapper">
+        <!-- header start
+    =========================================== -->
+        <!-- header end
+    =========================================== -->
+        <!-- sidebar start
+    =========================================== -->
+        <section class="sidebar" id="menu">
+            <div class="sidebar__inner">
+                <div class="sidebar__inner-logo">
+                    <svg>
+                        <use xlink:href="#logo"></use>
+                    </svg>
+                    <span>
+                        Blackwood
+                    </span>
+                </div>
+                <div class="sidebar__inner-main">
+                    <a href="#" class="sidebar__inner-main-button">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#cut"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Dashboard
+                        </span>
+                    </a>
+                    <a href="#" class="sidebar__inner-main-button">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#candidate"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Candidates
+                        </span>
+                    </a>
+                    <a href="#" class="sidebar__inner-main-button">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#search"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Search
+                        </span>
+                    </a>
+                    <a href="#" class="sidebar__inner-main-button active">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#list"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Findlist
+                        </span>
+                    </a>
+                    <a href="#" class="sidebar__inner-main-button">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#building"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Companies
+                        </span>
+                    </a>
+                    <a href="#" class="sidebar__inner-main-button">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#job"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Jobfile
+                        </span>
+                    </a>
+                    <a href="#" class="sidebar__inner-main-button">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#placeholder"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Meeting Admin
+                        </span>
+                    </a>
+                    <a href="#" class="sidebar__inner-main-button">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#placeholder"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Business Development
+                        </span>
+                    </a>
+                    <a href="#" class="sidebar__inner-main-button">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#placeholder"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Assessment Admin
+                        </span>
+                    </a>
+                    <span></span>
+                    <a href="#" class="sidebar__inner-main-button">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#star"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Favourites
+                        </span>
+                    </a>
+                    <a href="#" class="sidebar__inner-main-button">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#support"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Support
+                        </span>
+                    </a>
+                    <a href="#" class="sidebar__inner-main-button">
+                        <div class="sidebar__inner-main-button-icon">
+                            <svg>
+                                <use xlink:href="#setting"></use>
+                            </svg>
+                        </div>
+                        <span>
+                            Settings
+                        </span>
+                    </a>
+                </div>
+                <div class="sidebar__inner-out">
+                    <div class="sidebar__inner-out-text">
+                        <p>
+                            Olivia Rhye
+                        </p>
+                        <span>
+                            olivia@untitledui.com
+                        </span>
+                    </div>
+
+                    <svg>
+                        <use xlink:href="#exit"></use>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <header class="header">
+            <div class="auto__container">
+                <div class="header__inner">
+                    <div class="header__inner-info">
+                        <div class="header__inner-info-icon">
+                            <svg>
+                                <use xlink:href="#account"></use>
+                            </svg>
+                        </div>
+                        <h1>
+                            Your FindLists
+                        </h1>
+                    </div>
+                    <div class="header__inner-tools">
+                        <div class="header__inner-tools-button" onclick="remove()">
+                            <div class="header__inner-tools-button-icon">
+                                <img src="images/icons/bin.svg" alt="">
+                            </div>
+                            <div class="popup">
+                                <p>
+                                    Delete {{NumberSelected}} FindLists
+                                </p>
+                            </div>
+                        </div>
+                        <div class="header__inner-tools-button" onclick="merge()">
+                            <div class="header__inner-tools-button-icon">
+                                <img src="images/icons/cut.svg" alt="">
+                            </div>
+                            <div class="popup">
+                                <p>
+                                    {{ButtonDescription}}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="header__inner-tools-button" onclick="copy()">
+                            <div class="header__inner-tools-button-icon">
+                                <img src="images/icons/copy.svg" alt="">
+                            </div>
+                            <div class="popup">
+                                <p>
+                                    Copy {{NumberSelected}} to Your FindLists
+                                </p>
+                            </div>
+                        </div>
+                        <div class="header__inner-tools-search">
+                            <svg>
+                                <use xlink:href="#search"></use>
+                            </svg>
+                            <input type="text" placeholder="View Other FindLists...">
+                        </div>
+                        <div class="burger" id="menuBtn">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- sidebar end
+    =========================================== -->
+
+        <!-- main start
+    =========================================== -->
+        <main class="main">
+            <!-- list start
+    =========================================== -->
+            <section class="list">
+                <div class="auto__container">
+                    <div class="list__inner">
+
+                        <div class="list__inner-main">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" id="tick">
+
+                                            <label for="tick">
+                                                <div class="tick__icon">
+                                                </div>
+                                            </label>
+
+                                        </th>
+                                        <th>
+                                            <span>
+                                                Description
+                                                <div class="button up">
+                                                    <svg>
+                                                        <use xlink:href="#up"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="button down">
+                                                    <svg>
+                                                        <use xlink:href="#down"></use>
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span>
+                                                JobName
+                                                <div class="button up">
+                                                    <svg>
+                                                        <use xlink:href="#up"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="button down">
+                                                    <svg>
+                                                        <use xlink:href="#down"></use>
+                                                    </svg>
+                                                </div>
+
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span>
+                                                Created
+
+                                                <div class="button up">
+                                                    <svg>
+                                                        <use xlink:href="#up"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="button down">
+                                                    <svg>
+                                                        <use xlink:href="#down"></use>
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span>
+                                                No. of Records
+                                                <div class="button up">
+                                                    <svg>
+                                                        <use xlink:href="#up"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="button down">
+                                                    <svg>
+                                                        <use xlink:href="#down"></use>
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </th>
+                                        <th>
+                                            <span>
+                                                Type
+                                                <div class="button up">
+                                                    <svg>
+                                                        <use xlink:href="#up"></use>
+                                                    </svg>
+                                                </div>
+                                                <div class="button down">
+                                                    <svg>
+                                                        <use xlink:href="#down"></use>
+                                                    </svg>
+                                                </div>
+                                            </span>
+                                        </th>
+                                        <th>
+
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="tick-3">
+
+                                            <label for="tick-3">
+                                                <div class="tick__icon">
+                                                </div>
+                                            </label>
+                                            </label>
+                                        </td>
+                                        <td>
+
+                                            <p class="big">
+                                                TMT NoMet/Tel in last 2 months
+                                            </p>
+                                            <span>
+                                                194669
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                Update Call List
+                                            </p>
+                                            <span>
+                                                Facebook
+                                                <strong>
+                                                    <svg>
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                    Meta
+                                                </strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    12 months ago
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    84
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    {{Type}}
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="choose">
+                                            <label for="choose">
+                                                <svg>
+                                                    <use xlink:href="#pin"></use>
+                                                </svg>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="tick-4">
+                                            <label for="tick-4">
+                                                <div class="tick__icon">
+                                                </div>
+                                            </label>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <p class="big">
+                                                TMT NoMet/Tel in last 2 months
+                                            </p>
+                                            <span>
+                                                194669
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                Update Call List
+                                            </p>
+                                            <span>
+                                                Facebook
+                                                <strong>
+                                                    <svg>
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                    Meta
+                                                </strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    12 months ago
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    84
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    {{Type}}
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="choose-2">
+                                            <label for="choose-2">
+                                                <svg>
+                                                    <use xlink:href="#pin"></use>
+                                                </svg>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="tick-8">
+                                            <label for="tick-8">
+                                                <div class="tick__icon">
+                                                </div>
+                                            </label>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <p class="big">
+                                                TMT NoMet/Tel in last 2 months
+                                            </p>
+                                            <span>
+                                                194669
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                Update Call List
+                                            </p>
+                                            <span>
+                                                Facebook
+                                                <strong>
+                                                    <svg>
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                    Meta
+                                                </strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    12 months ago
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    84
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    {{Type}}
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="choose-5">
+                                            <label for="choose-5">
+                                                <svg>
+                                                    <use xlink:href="#pin"></use>
+                                                </svg>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="tick-9">
+                                            <label for="tick-9">
+                                                <div class="tick__icon">
+                                                </div>
+                                            </label>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <p class="big">
+                                                TMT NoMet/Tel in last 2 months
+                                            </p>
+                                            <span>
+                                                194669
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                Update Call List
+                                            </p>
+                                            <span>
+                                                Facebook
+                                                <strong>
+                                                    <svg>
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                    Meta
+                                                </strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    12 months ago
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    84
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    {{Type}}
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="choose-6">
+                                            <label for="choose-6">
+                                                <svg>
+                                                    <use xlink:href="#pin"></use>
+                                                </svg>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="tick-10">
+                                            <label for="tick-10">
+                                                <div class="tick__icon">
+                                                </div>
+                                            </label>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <p class="big">
+                                                TMT NoMet/Tel in last 2 months
+                                            </p>
+                                            <span>
+                                                194669
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                Update Call List
+                                            </p>
+                                            <span>
+                                                Facebook
+                                                <strong>
+                                                    <svg>
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                    Meta
+                                                </strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    12 months ago
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    84
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    {{Type}}
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="choose-7">
+                                            <label for="choose-7">
+                                                <svg>
+                                                    <use xlink:href="#pin"></use>
+                                                </svg>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="tick-11">
+                                            <label for="tick-11">
+                                                <div class="tick__icon">
+                                                </div>
+                                            </label>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <p class="big">
+                                                TMT NoMet/Tel in last 2 months
+                                            </p>
+                                            <span>
+                                                194669
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                Update Call List
+                                            </p>
+                                            <span>
+                                                Facebook
+                                                <strong>
+                                                    <svg>
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                    Meta
+                                                </strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    12 months ago
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    84
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    {{Type}}
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="choose-8">
+                                            <label for="choose-8">
+                                                <svg>
+                                                    <use xlink:href="#pin"></use>
+                                                </svg>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="tick-12">
+                                            <label for="tick-12">
+                                                <div class="tick__icon">
+                                                </div>
+                                            </label>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <p class="big">
+                                                TMT NoMet/Tel in last 2 months
+                                            </p>
+                                            <span>
+                                                194669
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                Update Call List
+                                            </p>
+                                            <span>
+                                                Facebook
+                                                <strong>
+                                                    <svg>
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                    Meta
+                                                </strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    12 months ago
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    84
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    {{Type}}
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="choose-9">
+                                            <label for="choose-9">
+                                                <svg>
+                                                    <use xlink:href="#pin"></use>
+                                                </svg>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="tick-13">
+                                            <label for="tick-13">
+                                                <div class="tick__icon">
+                                                </div>
+                                            </label>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <p class="big">
+                                                TMT NoMet/Tel in last 2 months
+                                            </p>
+                                            <span>
+                                                194669
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                Update Call List
+                                            </p>
+                                            <span>
+                                                Facebook
+                                                <strong>
+                                                    <svg>
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                    Meta
+                                                </strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    12 months ago
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    84
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    {{Type}}
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="choose-10">
+                                            <label for="choose-10">
+                                                <svg>
+                                                    <use xlink:href="#pin"></use>
+                                                </svg>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="tick-14">
+                                            <label for="tick-14">
+                                                <div class="tick__icon">
+                                                </div>
+                                            </label>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <p class="big">
+                                                TMT NoMet/Tel in last 2 months
+                                            </p>
+                                            <span>
+                                                194669
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                Update Call List
+                                            </p>
+                                            <span>
+                                                Facebook
+                                                <strong>
+                                                    <svg>
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                    Meta
+                                                </strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    12 months ago
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    84
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    {{Type}}
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="choose-11">
+                                            <label for="choose-11">
+                                                <svg>
+                                                    <use xlink:href="#pin"></use>
+                                                </svg>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="tick-15">
+                                            <label for="tick-15">
+                                                <div class="tick__icon">
+                                                </div>
+                                            </label>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <p class="big">
+                                                TMT NoMet/Tel in last 2 months
+                                            </p>
+                                            <span>
+                                                194669
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                Update Call List
+                                            </p>
+                                            <span>
+                                                Facebook
+                                                <strong>
+                                                    <svg>
+                                                        <use xlink:href="#arrow"></use>
+                                                    </svg>
+                                                    Meta
+                                                </strong>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    12 months ago
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    84
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p class="sm">
+                                                <strong>
+                                                    {{Type}}
+                                                </strong>
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" id="choose-12">
+                                            <label for="choose-12">
+                                                <svg>
+                                                    <use xlink:href="#pin"></use>
+                                                </svg>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="list__inner-pagination">
+                            <div class="list__inner-pagination-prev">
+                                <svg>
+                                    <use xlink:href="#prev"></use>
+                                </svg>
+                                <span>
+                                    Previous
+                                </span>
+                            </div>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">...</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            <div class="list__inner-pagination-next">
+                                <span>
+                                    Next
+                                </span>
+                                <svg>
+                                    <use xlink:href="#arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+               
+                </div>
+            </section>
+            <!-- list end
+=========================================== -->
+        </main>
+        <!-- main end
+    =========================================== -->
+        <!-- modals start
+    =========================================== -->
+    <div class="modal" id="del">
+        <div class="modal__outer">
+            <div class="modal__outer-content">
+                <div class="modal__outer-content-icon">
+                    <img src="images/icons/delate.svg" alt="">
+                </div>
+                <h2>
+                    Delete FindList
+                </h2>
+                <p class="sm">
+                    Are you sure you want to delete this FindList? This action cannot be undone.
+
+                </p>
+            </div>
+            <div class="modal__outer-content-buttons">
+                <a href="#" class="button__secondary" onclick="remove()">
+                    <span>
+                        Cancel
+                    </span>
+                </a>
+                <a href="#" class="button__primary" onclick="show() , remove()">
+                    <span>
+                        Delete
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="notificotion" id="alert">
+        <div class="notificotion__icon">
+            <img src="images/icons/notifiction.svg" alt="">
+        </div>
+        <p class="big">
+            FindList deleted
+            <strong onclick="show()">
+                Undo
+            </strong>
+        </p>
+        <div class="notificotion__close" onclick="show()">
+            <div class="notificotion__close-icon">
+                <img src="images/icons/x.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="merge">
+        <div class="modal__outer">
+            <div class="modal__outer-content">
+                <div class="modal__outer-content-icon">
+                    <img src="images/icons/merge.svg" alt="">
+                </div>
+                <h2>
+                    Merge FindLists
+                </h2>
+                <p class="sm">
+                    You can also rename your merged FindList
+
+                </p>
+                <form class="form">
+                    <div class="form__text">
+                        <input type="text" placeholder="{{FirstFindListName}}">
+                    </div>
+                </form>
+            </div>
+            <div class="modal__outer-content-buttons">
+                <a href="#" class="button__secondary" onclick="merge()">
+                    <span>
+                        Cancel
+                    </span>
+                </a>
+                <a href="#" class="button__primary" onclick="merge() , alert_merge()">
+                    <span>
+                        Confirm
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="notificotion" id="alert-merge">
+        <div class="notificotion__icon">
+            <img src="images/icons/notifiction.svg" alt="">
+        </div>
+        <p class="big">
+            FindLists merged
+            <strong onclick="alert_merge()">
+                Undo
+            </strong>
+        </p>
+        <div class="notificotion__close" onclick="alert_merge()">
+            <div class="notificotion__close-icon">
+                <img src="images/icons/x.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="copy">
+        <div class="modal__outer">
+            <div class="modal__outer-content">
+                <div class="modal__outer-content-icon">
+                    <img src="images/icons/coppy.svg" alt="">
+                </div>
+                <h2>
+                    Copy Findlist to user
+                </h2>
+                <form class="form">
+                    <div class="form__search">
+                        <input type="text" placeholder="Search Other Users" id="select">
+                        <label for="select">
+                            <div class="select">
+                                <div class="select__image">
+                                </div>
+                                <span>
+                                    Dan Spratling
+                                </span>
+                            </div>
+                            <div class="select">
+                                <div class="select__image">
+                                </div>
+                                <span>
+                                    Dan Scott
+                                </span>
+                            </div>
+                            <div class="select">
+                                <div class="select__image">
+                                </div>
+                                <span>
+                                    Dan Sullivan
+                                </span>
+                            </div>
+                            <div class="select">
+                                <div class="select__image">
+                                </div>
+                                <span>
+                                    Dan Stone
+                                </span>
+                            </div>
+                            <div class="select">
+                                <div class="select__image">
+                                </div>
+                                <span>
+                                    Dan Simpson
+                                </span>
+                            </div>
+                        </label>
+                        <div class="form__search-icon">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal__outer-content-buttons">
+                <a href="#" class="button__secondary" onclick="copy()">
+                    <span>
+                        Cancel
+                    </span>
+                </a>
+                <a href="#" class="button__primary" onclick="copy() , alert_coppy()">
+                    <span>
+                        Confirm
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="notificotion" id="alert-coppy">
+        <div class="notificotion__icon">
+            <img src="images/icons/notifiction.svg" alt="">
+        </div>
+        <p class="big">
+            FindList copied to {{OtherUsersName}}
+            <strong onclick=" alert_coppy()">
+                Undo
+            </strong>
+        </p>
+        <div class="notificotion__close" onclick=" alert_coppy()">
+            <div class="notificotion__close-icon">
+                <img src="images/icons/x.svg" alt="">
+            </div>
+        </div>
+    </div>
+        <!-- modals end
+    =========================================== -->
+        <!-- sprite start
+    =========================================== -->
+    </div>
+    <!-- wrapper end
+    =========================================== -->
+    <svg style="display: none">
+        <symbol id="bar" viewBox="0 0 24 25">
+            <g>
+                <path d="M18 20.2782V10.2782M12 20.2782V4.27817M6 20.2782V14.2782" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="prev" viewBox="0 0 14 14">
+            <g>
+                <path d="M12.8333 6.99999H1.16666M1.16666 6.99999L7 12.8333M1.16666 6.99999L7 1.16666"
+                    stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="exit" viewBox="0 0 36 36">
+            <g>
+                <path
+                    d="M15.5 25.5H12.1667C11.7246 25.5 11.3007 25.3244 10.9882 25.0118C10.6756 24.6993 10.5 24.2754 10.5 23.8333V12.1667C10.5 11.7246 10.6756 11.3007 10.9882 10.9882C11.3007 10.6756 11.7246 10.5 12.1667 10.5H15.5M21.3333 22.1667L25.5 18M25.5 18L21.3333 13.8333M25.5 18H15.5"
+                    stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="up" viewBox="0 0 10 5">
+            <g>
+                <path
+                    d="M9.01729 4.23282L5.26729 0.482817C5.19619 0.412398 5.10017 0.372894 5.0001 0.372894C4.90004 0.372894 4.80401 0.412398 4.73292 0.482817L0.982916 4.23282C0.932044 4.28704 0.897562 4.35455 0.88346 4.42755C0.869358 4.50055 0.876212 4.57605 0.903229 4.64532C0.931917 4.71357 0.980166 4.7718 1.04189 4.81267C1.10362 4.85355 1.17607 4.87524 1.2501 4.875H8.7501C8.82414 4.87524 8.89659 4.85355 8.95831 4.81267C9.02004 4.7718 9.06829 4.71357 9.09698 4.64532C9.124 4.57605 9.13085 4.50055 9.11675 4.42755C9.10265 4.35455 9.06816 4.28704 9.01729 4.23282Z" />
+            </g>
+        </symbol>
+        <symbol id="down" viewBox="0 0 10 5">
+            <g>
+                <path
+                    d="M9.09698 0.354689C9.06829 0.286439 9.02004 0.228207 8.95831 0.187333C8.89659 0.146458 8.82414 0.12477 8.7501 0.125002H1.2501C1.17607 0.12477 1.10362 0.146458 1.04189 0.187333C0.980166 0.228207 0.931917 0.286439 0.903229 0.354689C0.876212 0.423956 0.869358 0.499456 0.88346 0.572455C0.897562 0.645455 0.932044 0.71297 0.982916 0.767189L4.73292 4.51719C4.80459 4.5865 4.9004 4.62524 5.0001 4.62524C5.09981 4.62524 5.19561 4.5865 5.26729 4.51719L9.01729 0.767189C9.06816 0.71297 9.10265 0.645455 9.11675 0.572455C9.13085 0.499456 9.124 0.423956 9.09698 0.354689Z" />
+            </g>
+        </symbol>
+        <symbol id="account" viewBox="0 0 22 19">
+            <g>
+                <path
+                    d="M15 1.5H21M15 18V16.8C15 15.1198 15 14.2798 14.673 13.638C14.3854 13.0735 13.9265 12.6146 13.362 12.327C12.7202 12 11.8802 12 10.2 12H5.8C4.11984 12 3.27976 12 2.63803 12.327C2.07354 12.6146 1.6146 13.0735 1.32698 13.638C1 14.2798 1 15.1198 1 16.8V18M15 8.5H21M15 5H21M11.5 4.5C11.5 6.433 9.933 8 8 8C6.067 8 4.5 6.433 4.5 4.5C4.5 2.567 6.067 1 8 1C9.933 1 11.5 2.567 11.5 4.5Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="logo" viewBox="0 0 15 15">
+            <g>
+                <path
+                    d="M12.54 14.9083H2.34176L2.44071 14.4962C3.76661 14.2104 4.64395 13.9379 5.07272 13.6588C5.71918 13.2467 6.2535 12.6352 6.66248 11.8309C7.07806 11.0201 7.28915 10.1693 7.28915 9.27201C7.28915 9.14572 7.28255 8.95962 7.27595 8.71369C6.78781 9.71733 6.18753 10.4485 5.4817 10.9071C4.78247 11.3657 4.07005 11.5983 3.34443 11.5983C2.41432 11.5983 1.62274 11.2726 0.976284 10.6146C0.329826 9.95661 0 9.15902 0 8.20855C0 7.27138 0.296843 6.48708 0.890529 5.84901C1.48422 5.20429 2.15706 4.87861 2.90906 4.87861C3.39061 4.87861 4.04366 5.08465 4.86823 5.49674C4.53181 4.93178 4.31412 4.5064 4.20858 4.22724C4.10963 3.93479 4.06345 3.6224 4.06345 3.29671C4.06345 2.37284 4.38009 1.59518 5.01335 0.957111C5.64662 0.319037 6.4382 0 7.3815 0C8.3248 0 9.12298 0.31239 9.76284 0.950464C10.4093 1.58854 10.7391 2.34625 10.7391 3.23025C10.7391 3.94808 10.4621 4.70579 9.90796 5.49674C10.5808 5.17106 10.9832 4.9916 11.1217 4.95172C11.3394 4.88525 11.5835 4.85202 11.8539 4.85202C12.6587 4.85202 13.3513 5.17106 13.9318 5.80913C14.5255 6.44056 14.8224 7.22486 14.8224 8.16203C14.8224 9.13243 14.4991 9.94996 13.8461 10.608C13.2062 11.2593 12.4344 11.5917 11.5241 11.5917C11.0162 11.5917 10.4951 11.472 9.96074 11.2261C9.43301 10.9735 8.97126 10.6412 8.57547 10.2358C8.29182 9.93667 7.9488 9.43153 7.52662 8.72034C7.5596 10.0031 7.7509 11.0201 8.10712 11.7711C8.46992 12.5156 9.01743 13.1337 9.75624 13.6255C10.251 13.9579 11.1481 14.2503 12.441 14.4962L12.54 14.9083V14.9083Z" />
+            </g>
+        </symbol>
+        <symbol id="candidate" viewBox="0 0 24 21">
+            <g>
+                <path
+                    d="M17 19.2782V17.2782C17 16.2173 16.5786 15.1999 15.8284 14.4497C15.0783 13.6996 14.0609 13.2782 13 13.2782H5C3.93913 13.2782 2.92172 13.6996 2.17157 14.4497C1.42143 15.1999 1 16.2173 1 17.2782V19.2782M23 19.2782V17.2782C22.9993 16.3919 22.7044 15.5309 22.1614 14.8305C21.6184 14.13 20.8581 13.6297 20 13.4082M16 1.40817C16.8604 1.62847 17.623 2.12887 18.1676 2.83048C18.7122 3.53209 19.0078 4.395 19.0078 5.28317C19.0078 6.17134 18.7122 7.03425 18.1676 7.73586C17.623 8.43747 16.8604 8.93787 16 9.15817M13 5.27817C13 7.48731 11.2091 9.27817 9 9.27817C6.79086 9.27817 5 7.48731 5 5.27817C5 3.06903 6.79086 1.27817 9 1.27817C11.2091 1.27817 13 3.06903 13 5.27817Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="job" viewBox="0 0 22 21">
+            <g>
+                <path
+                    d="M15 19.2782V3.27817C15 2.74773 14.7893 2.23903 14.4142 1.86395C14.0391 1.48888 13.5304 1.27817 13 1.27817H9C8.46957 1.27817 7.96086 1.48888 7.58579 1.86395C7.21071 2.23903 7 2.74773 7 3.27817V19.2782M3 5.27817H19C20.1046 5.27817 21 6.1736 21 7.27817V17.2782C21 18.3827 20.1046 19.2782 19 19.2782H3C1.89543 19.2782 1 18.3827 1 17.2782V7.27817C1 6.1736 1.89543 5.27817 3 5.27817Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="building" viewBox="0 0 24 25">
+            <g>
+                <path
+                    d="M1.5 20.5282H22.5M13.5 20.5282V4.02817C13.5 3.82926 13.421 3.63849 13.2803 3.49784C13.1397 3.35719 12.9489 3.27817 12.75 3.27817H3.75C3.55109 3.27817 3.36032 3.35719 3.21967 3.49784C3.07902 3.63849 3 3.82926 3 4.02817V20.5282M21 20.5282V10.0282C21 9.82926 20.921 9.63849 20.7803 9.49784C20.6397 9.35719 20.4489 9.27817 20.25 9.27817H13.5M6 7.02817H9M7.5 13.0282H10.5M6 16.7782H9M16.5 16.7782H18M16.5 13.0282H18"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="list" viewBox="0 0 24 25">
+            <g>
+                <path d="M8 6.27817H21M8 12.2782H21M8 18.2782H21M3 6.27817H3.01M3 12.2782H3.01M3 18.2782H3.01"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="placeholder" viewBox="0 0 24 25">
+            <g>
+                <path
+                    d="M4.67271 3.53676C4.28219 3.14623 3.64902 3.14623 3.2585 3.53676C2.86798 3.92728 2.86798 4.56045 3.2585 4.95097L4.67271 3.53676ZM19.3272 21.0197C19.7178 21.4102 20.3509 21.4102 20.7415 21.0197C21.132 20.6292 21.132 19.996 20.7415 19.6055L19.3272 21.0197ZM4.5 5.02817H19.5V3.02817H4.5V5.02817ZM19.5 5.02817C19.3619 5.02817 19.25 4.91624 19.25 4.77817H21.25C21.25 3.81167 20.4665 3.02817 19.5 3.02817V5.02817ZM19.25 4.77817V19.7782H21.25V4.77817H19.25ZM19.25 19.7782C19.25 19.6401 19.3619 19.5282 19.5 19.5282V21.5282C20.4665 21.5282 21.25 20.7447 21.25 19.7782H19.25ZM19.5 19.5282H4.5V21.5282H19.5V19.5282ZM4.5 19.5282C4.63807 19.5282 4.75 19.6401 4.75 19.7782H2.75C2.75 20.7447 3.5335 21.5282 4.5 21.5282V19.5282ZM4.75 19.7782V4.77817H2.75V19.7782H4.75ZM4.75 4.77817C4.75 4.91624 4.63807 5.02817 4.5 5.02817V3.02817C3.5335 3.02817 2.75 3.81167 2.75 4.77817H4.75ZM3.2585 4.95097L19.3272 21.0197L20.7415 19.6055L4.67271 3.53676L3.2585 4.95097Z" />
+            </g>
+        </symbol>
+        <symbol id="search" viewBox="0 0 24 25">
+            <g>
+                <path
+                    d="M21 21.2782L16.65 16.9282M19 11.2782C19 15.6964 15.4183 19.2782 11 19.2782C6.58172 19.2782 3 15.6964 3 11.2782C3 6.85989 6.58172 3.27817 11 3.27817C15.4183 3.27817 19 6.85989 19 11.2782Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="setting" viewBox="0 0 24 25">
+            <g clip-path="url(#clip0_404_22891)">
+                <path
+                    d="M19.4 15.2782C19.2669 15.5798 19.2272 15.9144 19.286 16.2388C19.3448 16.5632 19.4995 16.8625 19.73 17.0982L19.79 17.1582C19.976 17.3439 20.1235 17.5645 20.2241 17.8073C20.3248 18.0501 20.3766 18.3103 20.3766 18.5732C20.3766 18.836 20.3248 19.0963 20.2241 19.339C20.1235 19.5818 19.976 19.8024 19.79 19.9882C19.6043 20.1741 19.3837 20.3216 19.1409 20.4223C18.8981 20.5229 18.6378 20.5747 18.375 20.5747C18.1122 20.5747 17.8519 20.5229 17.6091 20.4223C17.3663 20.3216 17.1457 20.1741 16.96 19.9882L16.9 19.9282C16.6643 19.6976 16.365 19.543 16.0406 19.4842C15.7162 19.4253 15.3816 19.4651 15.08 19.5982C14.7842 19.7249 14.532 19.9354 14.3543 20.2037C14.1766 20.472 14.0813 20.7864 14.08 21.1082V21.2782C14.08 21.8086 13.8693 22.3173 13.4942 22.6924C13.1191 23.0675 12.6104 23.2782 12.08 23.2782C11.5496 23.2782 11.0409 23.0675 10.6658 22.6924C10.2907 22.3173 10.08 21.8086 10.08 21.2782V21.1882C10.0723 20.8572 9.96512 20.5362 9.77251 20.2669C9.5799 19.9976 9.31074 19.7925 9 19.6782C8.69838 19.5451 8.36381 19.5053 8.03941 19.5642C7.71502 19.623 7.41568 19.7776 7.18 20.0082L7.12 20.0682C6.93425 20.2541 6.71368 20.4016 6.47088 20.5023C6.22808 20.6029 5.96783 20.6547 5.705 20.6547C5.44217 20.6547 5.18192 20.6029 4.93912 20.5023C4.69632 20.4016 4.47575 20.2541 4.29 20.0682C4.10405 19.8824 3.95653 19.6618 3.85588 19.419C3.75523 19.1763 3.70343 18.916 3.70343 18.6532C3.70343 18.3903 3.75523 18.1301 3.85588 17.8873C3.95653 17.6445 4.10405 17.4239 4.29 17.2382L4.35 17.1782C4.58054 16.9425 4.73519 16.6432 4.794 16.3188C4.85282 15.9944 4.81312 15.6598 4.68 15.3582C4.55324 15.0624 4.34276 14.8102 4.07447 14.6325C3.80618 14.4548 3.49179 14.3595 3.17 14.3582H3C2.46957 14.3582 1.96086 14.1475 1.58579 13.7724C1.21071 13.3973 1 12.8886 1 12.3582C1 11.8277 1.21071 11.319 1.58579 10.944C1.96086 10.5689 2.46957 10.3582 3 10.3582H3.09C3.42099 10.3504 3.742 10.2433 4.0113 10.0507C4.28059 9.85807 4.48572 9.5889 4.6 9.27817C4.73312 8.97655 4.77282 8.64197 4.714 8.31758C4.65519 7.99318 4.50054 7.69385 4.27 7.45817L4.21 7.39817C4.02405 7.21242 3.87653 6.99184 3.77588 6.74905C3.67523 6.50625 3.62343 6.246 3.62343 5.98317C3.62343 5.72034 3.67523 5.46008 3.77588 5.21729C3.87653 4.97449 4.02405 4.75391 4.21 4.56817C4.39575 4.38221 4.61632 4.2347 4.85912 4.13405C5.10192 4.0334 5.36217 3.98159 5.625 3.98159C5.88783 3.98159 6.14808 4.0334 6.39088 4.13405C6.63368 4.2347 6.85425 4.38221 7.04 4.56817L7.1 4.62817C7.33568 4.8587 7.63502 5.01335 7.95941 5.07217C8.28381 5.13099 8.61838 5.09128 8.92 4.95817H9C9.29577 4.8314 9.54802 4.62092 9.72569 4.35263C9.90337 4.08434 9.99872 3.76995 10 3.44817V3.27817C10 2.74773 10.2107 2.23903 10.5858 1.86395C10.9609 1.48888 11.4696 1.27817 12 1.27817C12.5304 1.27817 13.0391 1.48888 13.4142 1.86395C13.7893 2.23903 14 2.74773 14 3.27817V3.36817C14.0013 3.68995 14.0966 4.00434 14.2743 4.27263C14.452 4.54092 14.7042 4.7514 15 4.87817C15.3016 5.01128 15.6362 5.05099 15.9606 4.99217C16.285 4.93335 16.5843 4.7787 16.82 4.54817L16.88 4.48817C17.0657 4.30221 17.2863 4.1547 17.5291 4.05405C17.7719 3.9534 18.0322 3.90159 18.295 3.90159C18.5578 3.90159 18.8181 3.9534 19.0609 4.05405C19.3037 4.1547 19.5243 4.30221 19.71 4.48817C19.896 4.67391 20.0435 4.89449 20.1441 5.13729C20.2448 5.38008 20.2966 5.64034 20.2966 5.90317C20.2966 6.166 20.2448 6.42625 20.1441 6.66905C20.0435 6.91184 19.896 7.13242 19.71 7.31817L19.65 7.37817C19.4195 7.61385 19.2648 7.91318 19.206 8.23758C19.1472 8.56197 19.1869 8.89655 19.32 9.19817V9.27817C19.4468 9.57394 19.6572 9.82618 19.9255 10.0039C20.1938 10.1815 20.5082 10.2769 20.83 10.2782H21C21.5304 10.2782 22.0391 10.4889 22.4142 10.864C22.7893 11.239 23 11.7477 23 12.2782C23 12.8086 22.7893 13.3173 22.4142 13.6924C22.0391 14.0675 21.5304 14.2782 21 14.2782H20.91C20.5882 14.2795 20.2738 14.3748 20.0055 14.5525C19.7372 14.7302 19.5268 14.9824 19.4 15.2782Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M12 15.2782C13.6569 15.2782 15 13.935 15 12.2782C15 10.6213 13.6569 9.27817 12 9.27817C10.3431 9.27817 9 10.6213 9 12.2782C9 13.935 10.3431 15.2782 12 15.2782Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="star" viewBox="0 0 24 25">
+            <g>
+                <path
+                    d="M12 2.27817L15.09 8.53817L22 9.54817L17 14.4182L18.18 21.2982L12 18.0482L5.82 21.2982L7 14.4182L2 9.54817L8.91 8.53817L12 2.27817Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="support" viewBox="0 0 22 23">
+            <g>
+                <path
+                    d="M3.93 4.20817L8.17 8.44817M13.83 14.1082L18.07 18.3482M18.07 4.20817L13.83 8.44817L17.36 4.91817M3.93 18.3482L8.17 14.1082M21 11.2782C21 16.801 16.5228 21.2782 11 21.2782C5.47715 21.2782 1 16.801 1 11.2782C1 5.75532 5.47715 1.27817 11 1.27817C16.5228 1.27817 21 5.75532 21 11.2782ZM15 11.2782C15 13.4873 13.2091 15.2782 11 15.2782C8.79086 15.2782 7 13.4873 7 11.2782C7 9.06903 8.79086 7.27817 11 7.27817C13.2091 7.27817 15 9.06903 15 11.2782Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="bin" viewBox="0 0 20 20">
+            <g>
+                <path
+                    d="M13.3333 4.99999V4.33332C13.3333 3.3999 13.3333 2.93319 13.1517 2.57667C12.9919 2.26307 12.7369 2.0081 12.4233 1.84831C12.0668 1.66666 11.6001 1.66666 10.6667 1.66666H9.33333C8.39991 1.66666 7.9332 1.66666 7.57668 1.84831C7.26308 2.0081 7.00811 2.26307 6.84832 2.57667C6.66667 2.93319 6.66667 3.3999 6.66667 4.33332V4.99999M8.33333 9.58332V13.75M11.6667 9.58332V13.75M2.5 4.99999H17.5M15.8333 4.99999V14.3333C15.8333 15.7335 15.8333 16.4335 15.5608 16.9683C15.3212 17.4387 14.9387 17.8212 14.4683 18.0608C13.9335 18.3333 13.2335 18.3333 11.8333 18.3333H8.16667C6.76654 18.3333 6.06647 18.3333 5.53169 18.0608C5.06129 17.8212 4.67883 17.4387 4.43915 16.9683C4.16667 16.4335 4.16667 15.7335 4.16667 14.3333V4.99999"
+                    stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="cut" viewBox="0 0 18 18">
+            <g>
+                <path
+                    d="M0.998566 4.54151C0.998566 4.81765 1.22242 5.04151 1.49857 5.04151C1.77471 5.04151 1.99857 4.81765 1.99857 4.54151H0.998566ZM5.62555 1.00754C5.90169 1.00754 6.12555 0.78368 6.12555 0.507538C6.12555 0.231395 5.90169 0.00753784 5.62555 0.00753784V1.00754ZM1.99857 11.4585C1.99857 11.1824 1.77471 10.9585 1.49857 10.9585C1.22242 10.9585 0.998566 11.1824 0.998566 11.4585H1.99857ZM5.62555 15.9925C5.90169 15.9925 6.12555 15.7686 6.12555 15.4925C6.12555 15.2163 5.90169 14.9925 5.62555 14.9925V15.9925ZM16.0014 4.54151C16.0014 4.81765 16.2253 5.04151 16.5014 5.04151C16.7776 5.04151 17.0014 4.81765 17.0014 4.54151H16.0014ZM12.3745 0.00753784C12.0983 0.00753784 11.8745 0.231395 11.8745 0.507538C11.8745 0.78368 12.0983 1.00754 12.3745 1.00754V0.00753784ZM17.0014 11.4585C17.0014 11.1824 16.7776 10.9585 16.5014 10.9585C16.2253 10.9585 16.0014 11.1824 16.0014 11.4585H17.0014ZM12.3745 14.9925C12.0983 14.9925 11.8745 15.2163 11.8745 15.4925C11.8745 15.7686 12.0983 15.9925 12.3745 15.9925V14.9925ZM1.57588 7.50001C1.29973 7.50001 1.07588 7.72387 1.07588 8.00001C1.07588 8.27615 1.29973 8.50001 1.57588 8.50001V7.50001ZM7.40921 8.00001L7.76276 8.35356C7.85653 8.25979 7.90921 8.13262 7.90921 8.00001C7.90921 7.8674 7.85653 7.74022 7.76276 7.64646L7.40921 8.00001ZM4.8461 4.72979C4.65083 4.53453 4.33425 4.53453 4.13899 4.72979C3.94373 4.92505 3.94373 5.24163 4.13899 5.4369L4.8461 4.72979ZM4.13899 10.5631C3.94373 10.7584 3.94373 11.075 4.13899 11.2702C4.33425 11.4655 4.65083 11.4655 4.8461 11.2702L4.13899 10.5631ZM16.4241 8.50001C16.7003 8.50001 16.9241 8.27615 16.9241 8.00001C16.9241 7.72387 16.7003 7.50001 16.4241 7.50001V8.50001ZM10.5908 8.00001L10.2372 7.64646C10.1435 7.74022 10.0908 7.8674 10.0908 8.00001C10.0908 8.13262 10.1435 8.25979 10.2372 8.35356L10.5908 8.00001ZM13.861 5.4369C14.0563 5.24163 14.0563 4.92505 13.861 4.72979C13.6658 4.53453 13.3492 4.53453 13.1539 4.72979L13.861 5.4369ZM13.1539 11.2702C13.3492 11.4655 13.6658 11.4655 13.861 11.2702C14.0563 11.075 14.0563 10.7584 13.861 10.5631L13.1539 11.2702ZM1.99857 4.54151V2.1742H0.998566V4.54151H1.99857ZM3.16523 1.00754H5.62555V0.00753784H3.16523V1.00754ZM1.99857 2.1742C1.99857 1.52987 2.5209 1.00754 3.16523 1.00754V0.00753784C1.96862 0.00753784 0.998566 0.977587 0.998566 2.1742H1.99857ZM0.998566 11.4585V13.8258H1.99857V11.4585H0.998566ZM3.16523 15.9925H5.62555V14.9925H3.16523V15.9925ZM0.998566 13.8258C0.998566 15.0224 1.96862 15.9925 3.16523 15.9925V14.9925C2.5209 14.9925 1.99857 14.4701 1.99857 13.8258H0.998566ZM17.0014 4.54151V2.1742H16.0014V4.54151H17.0014ZM14.8348 0.00753784H12.3745V1.00754H14.8348V0.00753784ZM17.0014 2.1742C17.0014 0.977587 16.0314 0.00753784 14.8348 0.00753784V1.00754C15.4791 1.00754 16.0014 1.52987 16.0014 2.1742H17.0014ZM16.0014 11.4585V13.8258H17.0014V11.4585H16.0014ZM14.8348 14.9925H12.3745V15.9925H14.8348V14.9925ZM16.0014 13.8258C16.0014 14.4701 15.4791 14.9925 14.8348 14.9925V15.9925C16.0314 15.9925 17.0014 15.0224 17.0014 13.8258H16.0014ZM1.57588 8.50001H7.40921V7.50001H1.57588V8.50001ZM4.13899 5.4369L7.05566 8.35356L7.76276 7.64646L4.8461 4.72979L4.13899 5.4369ZM7.05566 7.64646L4.13899 10.5631L4.8461 11.2702L7.76276 8.35356L7.05566 7.64646ZM16.4241 7.50001H10.5908V8.50001H16.4241V7.50001ZM13.1539 4.72979L10.2372 7.64646L10.9444 8.35356L13.861 5.4369L13.1539 4.72979ZM10.2372 8.35356L13.1539 11.2702L13.861 10.5631L10.9444 7.64646L10.2372 8.35356Z" />
+            </g>
+        </symbol>
+        <symbol id="copy" viewBox="0 0 20 20">
+            <g>
+                <path
+                    d="M4.16666 12.5C3.39009 12.5 3.0018 12.5 2.69552 12.3731C2.28714 12.204 1.96268 11.8795 1.79352 11.4711C1.66666 11.1648 1.66666 10.7766 1.66666 9.99999V4.33332C1.66666 3.3999 1.66666 2.93319 1.84831 2.57667C2.0081 2.26307 2.26307 2.0081 2.57667 1.84831C2.93319 1.66666 3.3999 1.66666 4.33332 1.66666H9.99999C10.7766 1.66666 11.1648 1.66666 11.4711 1.79352C11.8795 1.96268 12.204 2.28714 12.3731 2.69552C12.5 3.0018 12.5 3.39009 12.5 4.16666M10.1667 18.3333H15.6667C16.6001 18.3333 17.0668 18.3333 17.4233 18.1517C17.7369 17.9919 17.9919 17.7369 18.1517 17.4233C18.3333 17.0668 18.3333 16.6001 18.3333 15.6667V10.1667C18.3333 9.23324 18.3333 8.76653 18.1517 8.41001C17.9919 8.0964 17.7369 7.84143 17.4233 7.68165C17.0668 7.49999 16.6001 7.49999 15.6667 7.49999H10.1667C9.23324 7.49999 8.76653 7.49999 8.41001 7.68165C8.0964 7.84143 7.84143 8.0964 7.68165 8.41001C7.49999 8.76653 7.49999 9.23324 7.49999 10.1667V15.6667C7.49999 16.6001 7.49999 17.0668 7.68165 17.4233C7.84143 17.7369 8.0964 17.9919 8.41001 18.1517C8.76653 18.3333 9.23324 18.3333 10.1667 18.3333Z"
+                    stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="arrow" viewBox="0 0 8 8">
+            <g>
+                <path d="M0.5 4H7.5M7.5 4L4 0.5M7.5 4L4 7.5" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+        <symbol id="pin" viewBox="0 0 20 20">
+            <g>
+                <path
+                    d="M6.87503 13.125L3.75003 16.25M12.0547 2.32024L7.18753 7.18743C7.18753 7.18743 5.02346 6.10149 2.70315 7.97649C2.63488 8.03174 2.57901 8.10077 2.5392 8.17906C2.49939 8.25735 2.47653 8.34315 2.47211 8.43087C2.46768 8.51859 2.4818 8.60626 2.51353 8.68815C2.54527 8.77005 2.5939 8.84434 2.65628 8.90618L11.0782 17.3281C11.1412 17.3922 11.2173 17.442 11.3014 17.474C11.3854 17.506 11.4754 17.5195 11.5651 17.5136C11.6549 17.5077 11.7423 17.4824 11.8214 17.4396C11.9005 17.3968 11.9694 17.3374 12.0235 17.2656C12.6797 16.3984 13.711 14.6015 12.8125 12.8124L17.6797 7.94524C17.7388 7.88709 17.7857 7.81777 17.8177 7.74132C17.8497 7.66487 17.8662 7.58281 17.8662 7.49993C17.8662 7.41705 17.8497 7.335 17.8177 7.25855C17.7857 7.18209 17.7388 7.11277 17.6797 7.05462L12.9453 2.32024C12.8872 2.26119 12.8179 2.21429 12.7414 2.18228C12.665 2.15027 12.5829 2.13379 12.5 2.13379C12.4171 2.13379 12.3351 2.15027 12.2586 2.18228C12.1822 2.21429 12.1129 2.26119 12.0547 2.32024Z" " stroke-width="
+                    1.67" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+        </symbol>
+    </svg>
+    <!-- sprite end
+    =========================================== -->
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

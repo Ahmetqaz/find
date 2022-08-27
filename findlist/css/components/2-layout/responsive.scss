@@ -1,0 +1,529 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // base start
+  // base end
+  // layout start
+  // layout end
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  // base start
+  .auto__container {
+    padding: 0 30px;
+  }
+  // base end
+  // layout start
+  // layout end
+}
+// 1280px
+@include xxxlg-xxxxlg-sm {
+  // base start
+  h1 {
+    font-size: 33px;
+    line-height: 40px;
+  }
+  .auto__container {
+    padding: 0 20px;
+  }
+  .wrapper {
+    margin-left: 240px;
+  }
+  .main {
+    margin-top: 90px;
+  }
+  // base end
+  // layout start
+  @include sidebar-xxxlg-xxxxlg-sm;
+  @include list-xxxlg-xxxxlg-sm;
+  @include header-xxxlg-xxxxlg-sm;
+
+  // layout end
+}
+// 1180px
+@include xxlg-xxxlg {
+  // base start
+  h1 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .wrapper {
+    margin-left: 215px;
+  }
+
+  // base end
+  // layout start
+  @include list-xxlg-xxxlg;
+  @include sidebar-xxlg-xxxlg;
+  @include header-xxlg-xxxlg;
+
+  // layout end
+}
+// 1100px
+@include xxlg-xxxlg-sm {
+  // base start
+  h1 {
+    font-size: 27px;
+    line-height: 32px;
+  }
+  // base end
+  // layout start
+  // layout end
+}
+// 1024px
+@include xlg-xxlg {
+  // base start
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  .wrapper {
+    width: 100%;
+    margin: unset;
+  }
+  .modal {
+    &__outer {
+      padding: 20px;
+      width: 380px;
+      &-content {
+        &-icon {
+          width: 40px;
+          height: 40px;
+        }
+        h2 {
+          font-size: 20px;
+          line-height: 24px;
+        }
+        p {
+          font-size: 13px;
+          line-height: 18px;
+          margin-bottom: 20px;
+        }
+        .form {
+          &__text {
+            margin-bottom: 25px;
+            input[type="text"] {
+              font-size: 13px;
+              line-height: 18px;
+              padding: 9px 13px;
+              &::placeholder {
+                font-size: 13px;
+                line-height: 18px;
+              }
+            }
+          }
+          &__search {
+            input[type="text"] {
+              font-size: 13px;
+              line-height: 18px;
+              padding: 9px 8px 8px 30px;
+              &::placeholder {
+                font-size: 13px;
+                line-height: 18px;
+              }
+            }
+            label {
+              .select {
+                &__image {
+                  width: 28px;
+                  height: 28px;
+                }
+                span {
+                  font-size: 15px;
+                  line-height: 20px;
+                }
+              }
+            }
+
+            &-icon {
+              width: 15px;
+              height: 15px;
+              left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .notificotion {
+    width: 450px;
+    &__icon {
+      width: 40px;
+      height: 40px;
+    }
+    p {
+      strong {
+        margin-top: 5px;
+      }
+    }
+    &__close {
+      width: 30px;
+      height: 30px;
+      &-icon {
+        width: 9px;
+        height: 9px;
+      }
+    }
+  }
+  .button {
+    &__primary {
+      padding: 8px 50px;
+      span {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    &__secondary {
+      padding: 7px 50px;
+      span {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    &__extra {
+      padding: 8px 50px;
+      span {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+  // base end
+  // layout start
+  @include sidebar-xlg-xxlg;
+  @include list-xlg-xxlg;
+  @include header-xlg-xxlg;
+
+  // layout end
+}
+// 840px
+@include lg-xlg {
+  // base start
+  h1 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  // base end
+  // layout start
+  @include list-lg-xlg;
+  @include sidebar-lg-xlg;
+  @include header-lg-xlg;
+
+  // layout end
+}
+// 750px
+@include md-lg {
+  // base start
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .button {
+    &.up {
+      top: -8px;
+      right: -15px;
+      svg {
+        width: 8px;
+        height: 4px;
+      }
+    }
+    &.down {
+      bottom: -4px;
+      right: -15px;
+      svg {
+        width: 8px;
+        height: 4px;
+      }
+    }
+    &__primary {
+      padding: 8px 40px;
+      span {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    &__secondary {
+      padding: 7px 40px;
+      span {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    &__extra {
+      padding: 8px 40px;
+      span {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+  .modal {
+    &__outer {
+      padding: 20px;
+      width: 350px;
+      &-content {
+        &-icon {
+          width: 35px;
+          height: 35px;
+        }
+        h2 {
+          font-size: 18px;
+          line-height: 22px;
+        }
+        p {
+          font-size: 12px;
+          line-height: 18px;
+          margin-bottom: 15px;
+        }
+        .form {
+          &__text {
+            margin-bottom: 20px;
+            input[type="text"] {
+              font-size: 12px;
+              line-height: 18px;
+              &::placeholder {
+                font-size: 12px;
+                line-height: 18px;
+              }
+            }
+          }
+          &__search {
+            input[type="text"] {
+              font-size: 12px;
+              line-height: 18px;
+              &::placeholder {
+                font-size: 12px;
+                line-height: 18px;
+              }
+            }
+            label {
+              .select {
+                &__image {
+                  width: 25px;
+                  height: 25px;
+                }
+                span {
+                  font-size: 14px;
+                  line-height: 18px;
+                }
+              }
+            }
+            &-icon {
+              width: 15px;
+              height: 15px;
+              left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .notificotion {
+    width: 400px;
+    &__icon {
+      width: 35px;
+      height: 35px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      strong {
+        margin-top: 5px;
+      }
+    }
+    &__close {
+      width: 25px;
+      height: 25px;
+      &-icon {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+  .main {
+    margin-top: 80px;
+  }
+  // base end
+  // layout start
+  @include list-md-lg;
+  @include sidebar-md-lg;
+  @include header-md-lg;
+
+  // layout end
+}
+// 600px
+@include sm-md {
+  // base start
+  h1 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .auto__container {
+    padding: 0 15px;
+  }
+  // base end
+  // layout start
+  @include list-sm-md;
+  @include sidebar-sm-md;
+  @include header-sm-md;
+
+  // layout end
+}
+// 500px
+@include sm-md-sm {
+  // base start
+  h1 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .auto__container {
+    padding: 0 13px;
+  }
+  .button {
+    &__primary {
+      padding: 6px 30px;
+      span {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    &__secondary {
+      padding: 5px 30px;
+      span {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+    &__extra {
+      padding: 8px 40px;
+      span {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+  .modal {
+    &__outer {
+      padding: 15px;
+      width: 300px;
+      &-content {
+        &-icon {
+          width: 35px;
+          height: 35px;
+          margin-bottom: 15px;
+        }
+        h2 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .form {
+          &__text {
+            margin-bottom: 15px;
+            input[type="text"] {
+              padding: 8px 12px;
+            }
+          }
+          &__search {
+            label {
+              .select {
+                &__image {
+                  width: 20px;
+                  height: 20px;
+                }
+                span {
+                  font-size: 13px;
+                  line-height: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .notificotion {
+    width: 350px;
+    padding: 13px;
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      strong {
+        margin-top: 5px;
+      }
+    }
+  }
+  .main {
+    margin-top: 90px;
+  }
+  // base end
+  // layout start
+  @include sidebar-sm-md-sm;
+  @include list-sm-md-sm;
+  @include header-sm-md-sm;
+
+  // layout end
+}
+// 450px
+@include xsm-sm {
+  // base start
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+  // base end
+  // layout start
+  @include list-xsm-sm;
+  // layout end
+}
+// 390px
+@include sm {
+  // base start
+  .auto__container {
+    padding: 0 10px;
+  }
+  .modal {
+    &__outer {
+      padding: 15px;
+      width: 90%;
+      max-width: 300px;
+      &-content {
+        &-icon {
+          width: 35px;
+          height: 35px;
+          margin-bottom: 15px;
+        }
+        h2 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .form {
+          &__text {
+            margin-bottom: 15px;
+            input[type="text"] {
+              padding: 8px 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .notificotion {
+    width: 90%;
+    max-width: 350px;
+    padding: 13px;
+    p {
+      font-size: 12px;
+      line-height: 16px;
+      strong {
+        margin-top: 5px;
+      }
+    }
+  }
+  // base end
+  // layout start
+  @include list-sm;
+  @include sidebar-sm;
+  @include header-sm;
+
+  // layout end
+}

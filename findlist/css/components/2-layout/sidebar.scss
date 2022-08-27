@@ -1,0 +1,346 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  background-color: $white;
+  width: 280px;
+  overflow: auto;
+  &__inner {
+    padding: 24px 8px 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    max-height: 900px;
+    box-sizing: border-box;
+    &-logo {
+      display: flex;
+      align-items: center;
+      padding-left: 18px;
+      svg {
+        fill: $gray3;
+        width: 15px;
+        height: 15px;
+        margin-right: 8px;
+      }
+      span {
+        display: block;
+        font-size: 24px;
+        line-height: 30px;
+        color: $gray3;
+        font-family: "Lora", serif;
+        font-weight: 700;
+      }
+    }
+    &-main {
+      padding: 30px 0;
+      span {
+        display: block;
+        height: 24px;
+      }
+      &-button {
+        display: flex;
+        align-items: center;
+        padding: 6px 12px;
+        box-sizing: border-box;
+        margin-bottom: 4px;
+        border-radius: 6px;
+        overflow: hidden;
+        @include transition;
+        &:last-child {
+          margin-bottom: unset;
+        }
+        &-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            width: 24px;
+            height: 23px;
+            stroke: $gray3;
+            margin-right: 12px;
+            fill: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include transition;
+          }
+        }
+        span {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 500;
+          display: block;
+          color: $blue;
+          @include transition;
+          height: auto;
+        }
+        &:hover {
+          background-color: $violet-light;
+          svg {
+            stroke: $violet;
+          }
+          span {
+            color: $violet-dark;
+          }
+        }
+        &:focus{
+          box-shadow: 0px 0px 0px 4px #F4EBFF;
+        }
+      }
+    }
+    &-out {
+      position: relative;
+      padding: 17px 0 8px;
+      @include transition;
+      border-radius: 6px;
+      cursor: pointer;
+      &::before {
+        width: 100%;
+        height: 1px;
+        background-color: $gray4;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &-text {
+        margin: 0 auto;
+        max-width: 141px;
+        text-align: left;
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 500;
+          display: block;
+          @include transition;
+        }
+        span {
+          display: block;
+          @include transition;
+        }
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+        stroke: $gray3;
+        fill: $white;
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        @include transition;
+      }
+      &:hover {
+        background-color: $violet-light;
+        p {
+          color: $violet-dark;
+        }
+        span {
+          color: $violet-dark;
+        }
+        svg {
+          stroke: $violet;
+        }
+      }
+    }
+  }
+  .active{
+      background-color: $violet-light;
+      svg {
+        stroke: $violet;
+      }
+      span {
+        color: $violet-dark;
+      }
+
+  }
+}
+// 1280px
+@mixin sidebar-xxxlg-xxxxlg-sm {
+  .sidebar {
+    width: 240px;
+    &__inner {
+    
+      &-logo {
+        span {
+          font-size: 22px;
+          line-height: 25px;
+        }
+      }
+      &-main {
+        &-button {
+          span {
+            font-size: 14.5px;
+            line-height: 18px;
+          }
+          svg {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+      &-out {
+        &-text {
+          span {
+            font-size: 13px;
+            line-height: 18px;
+          }
+          P {
+            font-size: 13px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+// 1180px
+@mixin sidebar-xxlg-xxxlg {
+  .sidebar {
+    width: 215px;
+    &__inner {
+      max-height: 850px;
+
+      &-logo {
+        padding-left: 12px;
+        span {
+          font-size: 20px;
+          line-height: 23px;
+        }
+        svg {
+          width: 13px;
+          height: 13px;
+        }
+      }
+      &-main {
+        &-button {
+          padding: 6px 8px;
+          span {
+            font-size: 13.5px;
+            line-height: 16px;
+          }
+          svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+          }
+        }
+      }
+      &-out {
+        &-text {
+          span {
+            font-size: 12px;
+            line-height: 16px;
+          }
+          P {
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+        svg {
+          top: 9px;
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin sidebar-xlg-xxlg {
+  .sidebar {
+    @include transition;
+    z-index: 10;
+    left: 100%;
+    width: 100%;
+    height: calc(100% - 90px);
+    max-height: unset;
+    top: 90px;
+    background-color: rgba(0, 0, 0, 0.3);
+    &__inner {
+      padding: 20px 0;
+      position: absolute;
+      width: 250px;
+      top: 0;
+      right: 0;
+      background-color: $white;
+      height: 100%;
+      max-height: unset;
+      overflow: auto;
+      &-logo {
+        padding: 6px 15px;
+      }
+      &-main {
+        &-button {
+          padding: 6px 15px;
+        }
+      }
+    }
+  }
+  .active {
+    left: 0;
+  }
+}
+// 840px
+@mixin sidebar-lg-xlg {
+  .sidebar {
+    height: calc(100% - 86px);
+    top: 86px;
+  }
+}
+// 750px
+@mixin sidebar-md-lg {
+  .sidebar {
+    height: calc(100% - 81px);
+    top: 81px;
+  }
+}
+// 600px
+@mixin sidebar-sm-md{
+  .sidebar {
+    height: calc(100% - 77px);
+    top: 77px;
+    &__inner{
+      &-main{
+        padding: 20px 0;
+      }
+    }
+  }
+
+}
+// 500px
+@mixin sidebar-sm-md-sm{
+  .sidebar {
+    height: calc(100% - 90px);
+    top: 90px;
+    &__inner{
+      padding: 10px 0;
+      &-main{
+        padding: 10px 0;
+      }
+      &-logo{
+        span{
+          font-size: 16px;
+          line-height: 20px;
+        }
+        svg{
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+
+}
+// 390px
+@mixin sidebar-sm{
+.sidebar{
+  &__inner{
+    width: 100%;
+  }
+}
+}
+
+

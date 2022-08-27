@@ -1,0 +1,508 @@
+.header {
+  margin-bottom: 16px;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 100%;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-info {
+      display: flex;
+      align-items: center;
+      &-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        border: 2px solid $violet3;
+        margin-right: 12px;
+        @include transition;
+        cursor: pointer;
+        border: 1px solid transparent;
+
+        &:focus {
+          border: 1px solid $red-2;
+          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05),
+            0px 0px 0px 4px #fee4e2;
+          background-color: $white;
+        }
+        svg {
+          stroke: $violet2;
+          fill: transparent;
+          width: 20px;
+          height: 17px;
+        }
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    &-tools {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 60%;
+      &-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        background-color: unset;
+        border-radius: 4px;
+        @include transition;
+        cursor: pointer;
+        position: relative;
+        border: 1px solid transparent;
+        &:hover {
+          background-color: $white;
+          .popup {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        &:active {
+          border: 1px solid $red-2;
+          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05),
+            0px 0px 0px 4px #fee4e2;
+          background-color: $white;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        &:nth-child(2) {
+          svg {
+            fill: $blue;
+          }
+        }
+        .popup {
+          position: absolute;
+          box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+            0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+          border-radius: 8px;
+          background-color: $white;
+          z-index: 2;
+          right: 0;
+          bottom: calc(100% + 12px);
+          @include transition;
+          transform: translateY(100%);
+          opacity: 0;
+          pointer-events: none;
+          &:after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            border-bottom: 1px solid $white;
+            border-right: 1px solid $white;
+            right: 11px;
+            top: 70%;
+            transform: rotate(45deg);
+            background-color: $white;
+            z-index: -1;
+          }
+          p {
+            font-size: 12px;
+            line-height: 18px;
+            color: $violet-dark;
+            padding: 4px 8px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            height: 18px;
+          }
+        }
+      }
+      &-search {
+        position: relative;
+        padding: 11px 18px 11px 45px;
+        background-color: $white;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 321px;
+        box-sizing: border-box;
+        margin-left: 8px;
+        svg {
+          fill: transparent;
+          stroke: $blue;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          left: 14px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        input {
+          height: 18px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          color: $blue;
+          font-weight: 400;
+          font-size: 16px;
+          width: 100%;
+          &::placeholder {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+            color: $gray5;
+          }
+        }
+      }
+      .burger {
+        display: none;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        &::before {
+          top: 20%;
+          width: calc(100% - 0.4rem);
+          height: 4px;
+          background-color: $violet-dark;
+          border-radius: 0.125rem;
+          transition: all 0.3s ease;
+          content: "";
+          position: absolute;
+          left: 50%;
+          @include transformX;
+        }
+        &::after {
+          bottom: 20%;
+          width: calc(100% - 0.4rem);
+          height: 4px;
+          background-color: $violet-dark;
+          border-radius: 0.125rem;
+          transition: all 0.3s ease;
+          content: "";
+          position: absolute;
+          left: 50%;
+          @include transformX;
+        }
+        &.active {
+          &::before {
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
+          &::after {
+            bottom: 50%;
+            -webkit-transform: translate(-50%, 50%) rotate(-45deg);
+            transform: translate(-50%, 50%) rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}
+// 1280px
+@mixin header-xxxlg-xxxxlg-sm {
+  .header {
+    &__inner {
+      &-info {
+        &-icon {
+          width: 44px;
+          height: 44px;
+          svg {
+            width: 18px;
+            height: 14px;
+          }
+        }
+      }
+      &-tools {
+        &-button {
+          width: 33px;
+          height: 33px;
+          img {
+            width: 16px;
+            height: 16px;
+          }
+          .popup {
+            &:after {
+              right: 10.5px;
+            }
+          }
+        }
+        &-search {
+          input {
+            &::placeholder {
+              font-size: 14px;
+            }
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+// 1180px
+@mixin header-xxlg-xxxlg {
+  .header {
+    &__inner {
+      &-info {
+        &-icon {
+          width: 40px;
+          height: 40px;
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+      &-tools {
+        &-search {
+          max-width: 250px;
+          .tick__icon {
+            &::after {
+              right: 9.5px;
+            }
+          }
+          input {
+            &::placeholder {
+              font-size: 13px;
+            }
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin header-xlg-xxlg {
+  .header {
+    &__inner {
+      &-tools {
+        .burger {
+          display: block;
+          cursor: pointer;
+        }
+        &-search {
+          margin: 0 8px;
+        }
+      }
+    }
+  }
+}
+// 840px
+@mixin header-lg-xlg {
+  .header {
+    margin-bottom: 10px;
+    &__inner {
+      &-info {
+        &-icon {
+          width: 38px;
+          height: 38px;
+          svg {
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+      &-tools {
+        &-button {
+          width: 30px;
+          height: 30px;
+          img {
+            width: 14px;
+            height: 14px;
+          }
+          .popup {
+            &:after {
+              right: 8.5px;
+            }
+            p {
+              font-size: 11px;
+              line-height: 16px;
+              height: 16px;
+            }
+          }
+        }
+        &-search {
+          max-width: 230px;
+          padding: 8px 18px 8px 35px;
+          svg {
+            width: 18px;
+            height: 18px;
+            left: 10px;
+          }
+          input {
+            &::placeholder {
+              font-size: 13px;
+            }
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+// 750px
+@mixin header-md-lg {
+  .header {
+    margin-bottom: 5px;
+    &__inner {
+      &-info {
+        &-icon {
+          width: 35px;
+          height: 35px;
+          svg {
+            width: 13px;
+            height: 13px;
+          }
+        }
+      }
+      &-tools {
+        &-search {
+          max-width: 180px;
+          padding: 6px 14px 6px 35px;
+          svg {
+            width: 16px;
+            height: 16px;
+            left: 10px;
+          }
+          input {
+            &::placeholder {
+              font-size: 12px;
+            }
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+// 600px
+@mixin header-sm-md {
+  .header {
+    &__inner {
+      &-info {
+        &-icon {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+          svg {
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+      &-tools {
+        &-search {
+          max-width: 160px;
+          padding: 6px 14px 6px 35px;
+          svg {
+            width: 16px;
+            height: 16px;
+            left: 10px;
+          }
+          input {
+            &::placeholder {
+              font-size: 12px;
+            }
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+// 500px
+@mixin header-sm-md-sm {
+  .header {
+    top: 10px;
+    &__inner {
+    flex-direction: column;
+      &-info {
+        margin-bottom: 10px;
+        width: 100%;
+        justify-content: center;
+      }
+      &-tools {
+        width: 100%;
+        justify-content: center;
+        &-search {
+          max-width: 180px;
+          padding: 4px 14px 6px 35px;
+          input {
+            &::placeholder {
+              font-size: 11px;
+            }
+            font-size: 11px;
+          }
+        }
+        &-button {
+          .popup {
+            right: unset;
+            left: 0;
+            &:after {
+              right: unset;
+              left: 8.5px;
+            }
+          }
+        }
+        .burger {
+          height: 20px;
+          width: 20px;
+          &::after {
+            height: 2px;
+          }
+          &::before {
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 390px
+@mixin header-sm {
+  .header {
+    &__inner {
+      &-tools {
+        position: relative;
+        &-search {
+          width: calc(100% - 90px);
+          padding: 4px 14px 6px 25px;
+          margin: 0 5px;
+          svg {
+            left: 5px;
+          }
+          input {
+            &::placeholder {
+              font-size: 11px;
+            }
+            font-size: 11px;
+          }
+        }
+        &-button {
+          .popup {
+            right: unset;
+            left: 0;
+            p {
+              font-size: 11px;
+            }
+            &:after {
+              right: unset;
+              left: 8.5px;
+            }
+          }
+        }
+        .burger {
+          height: 15px;
+        }
+      }
+    }
+  }
+}

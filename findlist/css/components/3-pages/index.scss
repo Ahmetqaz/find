@@ -1,0 +1,861 @@
+.list {
+  width: 100%;
+  box-sizing: border-box;
+  &__inner {
+    position: relative;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 64px);
+      box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.1),
+        0px 4px 6px -2px rgba(16, 24, 40, 0.05);
+      left: 0;
+      bottom: 0;
+    }
+    &-main {
+      background-color: $white;
+      padding: 4px 4px 0;
+      border-radius: 12px 12px 0 0;
+      overflow: auto;
+      height: calc(100vh - 174px);
+      max-height: 692px;
+      table {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        margin-bottom: 4px;
+        white-space: nowrap;
+        thead {
+          position: relative;
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $gray6;
+            border-radius: 10px;
+          }
+          th {
+            padding: 13px 15px;
+            position: relative;
+            &:nth-child(1) {
+              padding: 13px 12px 13px 24px;
+              width: 20px;
+            }
+            &:nth-child(2) {
+              padding-left: unset;
+            }
+            input {
+              display: none;
+            }
+            label {
+              position: relative;
+              font-size: 12px;
+              line-height: 18px;
+              font-weight: 500;
+              color: $gray3;
+              width: 20px;
+              height: 20px;
+              border-radius: 6px;
+              display: block;
+              border: 1px solid $gray2;
+              z-index: 5;
+              cursor: pointer;
+              @include transition;
+              &:focus {
+                border: 1px solid $violet4;
+                box-shadow: 0px 0px 0px 4px #f4ebff;
+              }
+              &:active {
+                border: 1px solid $violet4;
+                box-shadow: 0px 0px 0px 4px #f4ebff;
+              }
+              &:hover {
+                border-color: $violet2;
+              }
+              .tick__icon {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                &::before {
+                  content: "";
+                  width: 14px;
+                  height: 14px;
+                  background-image: url("../images/icons/check.svg");
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  position: absolute;
+                  @include transition;
+                  cursor: pointer;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%) scale(0);
+                }
+              }
+            }
+            span {
+              position: relative;
+              font-size: 12px;
+              line-height: 18px;
+              font-weight: 500;
+              color: $gray3;
+              cursor: pointer;
+            }
+            input:checked + label {
+              .tick__icon {
+                &::before {
+                  transform: translate(-50%, -50%) scale(1);
+                }
+              }
+              border-color: $violet2;
+              background-color: $violet-light;
+            }
+          }
+        }
+        tbody {
+          tr {
+            @include transition;
+            position: relative;
+            // &:hover{
+            //   background-color: $violet-light;
+            // }
+          }
+          td {
+            padding: 12px 15px;
+            &:nth-child(1) {
+              padding: 13px 12px 13px 24px;
+              width: 20px;
+            }
+            &:nth-child(2) {
+              padding-left: unset;
+            }
+            input {
+              display: none;
+            }
+            label {
+              position: relative;
+              cursor: pointer;
+              width: 20px;
+              height: 20px;
+              border-radius: 6px;
+              display: block;
+              border: 1px solid $gray2;
+              z-index: 1;
+              @include transition;
+              &:hover {
+                border-color: $violet2;
+              }
+              &:focus {
+                border: 1px solid $violet4;
+                box-shadow: 0px 0px 0px 4px #f4ebff;
+              }
+              &:active {
+                border: 1px solid $violet4;
+                box-shadow: 0px 0px 0px 4px #f4ebff;
+              }
+              .tick__icon {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                &::before {
+                  content: "";
+                  width: 14px;
+                  height: 14px;
+                  background-image: url("../images/icons/check.svg");
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  position: absolute;
+                  @include transition;
+                  cursor: pointer;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%) scale(0);
+                }
+               
+              }
+              span {
+                display: block;
+                color: $gray3;
+                font-size: 12px;
+                line-height: 18px;
+              }
+              
+            }
+            input:checked + label {
+              .tick__icon {
+                &::before {
+                  transform: translate(-50%, -50%) scale(1);
+                }
+              }
+              border-color: $violet2;
+              background-color: $violet-light;
+              svg {
+                fill: $violet2;
+                stroke: $violet2;
+                @include transition;
+              }
+            }
+            span {
+              display: block;
+              color: $gray3;
+              font-size: 12px;
+              line-height: 18px;
+              strong {
+                svg {
+                  width: 7px;
+                  height: 7px;
+                  stroke: $violet5;
+                  margin: 0 6.5px;
+                }
+                color: $violet5;
+                font-weight: 400;
+              }
+            }
+            &:last-child {
+              label {
+                background-color: transparent;
+                border: unset;
+                width: 34px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px;
+                &::before {
+                  display: none;
+                }
+                svg {
+                  width: 20px;
+                  height: 20px;
+                  fill: transparent;
+                  stroke: $gray3;
+                  @include transition;
+                }
+                &:hover {
+                  background-color: $gray6 !important;
+                  svg {
+                    stroke: $gray7;
+                  }
+                }
+                &:focus {
+                  border: unset;
+                  box-shadow: unset;
+                  svg{
+                    stroke: $red
+                  }
+                }
+                &:active {
+                  border: unset;
+                  box-shadow: unset;
+                  svg{
+                    stroke: $red;
+                  }
+                }
+              }
+              input:checked + label {
+                border-color: transparent;
+                background-color: transparent;
+              }
+            }
+            &:nth-child(4) {
+              text-align: center;
+              p {
+              }
+            }
+           
+          }
+        }
+      }
+    }
+    &-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 0;
+      position: relative;
+      &::before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: $gray8;
+        position: absolute;
+        left: 0;
+        top: 4px;
+      }
+      &:after {
+        content: "";
+        width: 100%;
+        height: calc(100% + 5px);
+        position: absolute;
+        top: -5px;
+        left: 0;
+        background-color: $white;
+        border-radius: 0 0 12px 12px;
+        z-index: -1;
+      }
+      &-prev {
+        border: 1px solid $gray2;
+        display: flex;
+        align-items: center;
+        border-radius: 8px 0px 0px 8px;
+        padding: 10px 16px;
+        cursor: pointer;
+        @include transition;
+        &:hover {
+          svg {
+            stroke: $violet-dark;
+          }
+          span {
+            color: $violet-dark;
+          }
+        }
+        svg {
+          stroke: $blue;
+          width: 12px;
+          height: 12px;
+          margin-right: 10px;
+          @include transition;
+        }
+        span {
+          display: block;
+          color: $blue-dark;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 500;
+          @include transition;
+        }
+      }
+      &-next {
+        border: 1px solid $gray2;
+        display: flex;
+        align-items: center;
+        border-radius: 0 8px 8px 0;
+        padding: 10px 16px;
+        @include transition;
+        cursor: pointer;
+        &:hover {
+          svg {
+            stroke: $violet-dark;
+          }
+          span {
+            color: $violet-dark;
+          }
+        }
+        svg {
+          stroke: $blue;
+          width: 12px;
+          height: 12px;
+          margin-left: 10px;
+          @include transition;
+        }
+        span {
+          display: block;
+          color: $blue-dark;
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 500;
+          @include transition;
+        }
+      }
+      a {
+        border: 1px solid $gray2;
+        display: block;
+        color: $blue-dark;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        padding: 10px 16px;
+        @include transition;
+        &:hover {
+          background-color: $gray6;
+          color: $violet-dark;
+        }
+      }
+      .active {
+        background-color: $gray6;
+      }
+    }
+  }
+}
+// 1280px
+@mixin list-xxxlg-xxxxlg-sm {
+  .list {
+    &__inner {
+      &-main {
+      max-height: 690px;
+
+        table {
+          thead {
+            th {
+              &:first-child {
+                padding-left: 15px;
+              }
+              span {
+                font-size: 11.5px;
+                line-height: 16px;
+              }
+              label {
+                width: 18px;
+                height: 18px;
+                .tick__icon {
+                  &::before {
+                    width: 12px;
+                    height: 12px;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            td {
+              &:first-child {
+                padding-left: 15px;
+              }
+              label {
+                width: 18px;
+                height: 18px;
+                .tick__icon {
+                  &::before {
+                    width: 12px;
+                    height: 12px;
+                  }
+                }
+              }
+              p {
+                font-size: 13px;
+                line-height: 18px;
+              }
+
+              span {
+                font-size: 11px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+      }
+      &-pagination {
+        a {
+          font-size: 13px;
+          line-height: 17px;
+        }
+        &-prev {
+          span {
+            font-size: 13px;
+            line-height: 17px;
+          }
+          svg {
+            width: 11px;
+            height: 11px;
+          }
+        }
+        &-next {
+          span {
+            font-size: 13px;
+            line-height: 17px;
+          }
+          svg {
+            width: 11px;
+            height: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+// 1180px
+@mixin list-xxlg-xxxlg {
+  .list {
+    &__inner {
+      &-main {
+        max-height: 645px;
+        table {
+          thead {
+            th {
+              padding: 10px 15px;
+              &:first-child {
+                padding: 10px 12px 10px 15px;
+              }
+              label {
+                width: 16px;
+                height: 16px;
+                .tick__icon {
+                  &::before {
+                    width: 10px;
+                    height: 10px;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            td {
+              padding: 10px 15px;
+              &:first-child {
+                padding: 10px 12px 10px 15px;
+              }
+              label {
+                width: 16px;
+                height: 16px;
+                .tick__icon {
+                  &::before {
+                    width: 10px;
+                    height: 10px;
+                  }
+                }
+              }
+              &:last-child {
+                label {
+                  svg {
+                    width: 18px;
+                    height: 18px;
+                  }
+                }
+              }
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin list-xlg-xxlg {
+  .list {
+    &__inner {
+      
+    }
+  }
+}
+// 840px
+@mixin list-lg-xlg {
+  .list {
+    &__inner {
+      &-main {
+        max-height: 620px;
+        height: calc(100vh - 164px);
+        table {
+          thead {
+            th {
+              padding: 8px 15px;
+              &:first-child {
+                padding: 8px 10px 8px 10px;
+              }
+              label {
+                width: 14px;
+                height: 14px;
+                .tick__icon {
+                  &::before {
+                    width: 8px;
+                    height: 8px;
+                  }
+                }
+              }
+            }
+          }
+          tbody {
+            td {
+              padding: 8px 15px;
+              &:first-child {
+                padding: 8px 10px 8px 10px;
+              }
+              label {
+                width: 14px;
+                height: 14px;
+                .tick__icon {
+                  &::before {
+                    width: 8px;
+                    height: 8px;
+                  }
+                }
+              }
+              p {
+                font-size: 12px;
+                line-height: 16px;
+                span {
+                  font-size: 10px;
+                  line-height: 14px;
+                }
+              }
+              &:last-child {
+                label {
+                  svg {
+                    width: 15px;
+                    height: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &-pagination {
+        a {
+          padding: 8px 14px;
+          font-size: 12px;
+          line-height: 16px;
+        }
+        &-prev {
+          padding: 8px 14px;
+          span {
+            font-size: 12px;
+            line-height: 16px;
+          }
+          svg {
+            width: 10px;
+            height: 10px;
+          }
+        }
+        &-next {
+          padding: 8px 14px;
+          span {
+            font-size: 12px;
+            line-height: 16px;
+          }
+          svg {
+            width: 10px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+// 750px
+@mixin list-md-lg {
+  .list {
+    &__inner {
+      &-main {
+        height: calc(100vh - 155px);
+
+        table {
+          thead {
+            th {
+              padding: 8px 15px;
+              span {
+                font-size: 11px;
+                line-height: 14px;
+              }
+            }
+          }
+          tbody {
+            td {
+              padding: 8px 15px;
+              p {
+                font-size: 11px;
+                line-height: 14px;
+              }
+              span {
+                font-size: 11px;
+                line-height: 14px;
+              }
+              &:last-child {
+                label {
+                  svg {
+                    width: 15px;
+                    height: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &-pagination {
+        a {
+          padding: 6px 10px;
+          font-size: 11px;
+          line-height: 14px;
+        }
+        &-prev {
+          padding: 6px 10px;
+          span {
+            font-size: 11px;
+            line-height: 14px;
+          }
+
+          svg {
+            width: 8px;
+            height: 8px;
+            margin-right: 8px;
+          }
+        }
+        &-next {
+          padding: 6px 10px;
+          span {
+            font-size: 11px;
+            line-height: 14px;
+          }
+          svg {
+            width: 8px;
+            height: 8px;
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+// 600px
+@mixin list-sm-md {
+  .list {
+    &__inner {
+      
+      &-main {
+        table {
+          thead {
+          }
+          tbody {
+            p {
+              font-size: 11px;
+              line-height: 14px;
+            }
+            span {
+              font-size: 11px;
+              line-height: 14px;
+            }
+            &:last-child {
+              label {
+                svg {
+                  width: 15px;
+                  height: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// 500px
+@mixin list-sm-md-sm {
+  .list {
+    &__inner {
+     
+      &-main {
+        table {
+          thead {
+            th {
+              label {
+                
+              }
+            }
+          }
+          tbody {
+            td {
+              padding: 8px 15px;
+             
+              label {
+                p {
+                  font-size: 11px;
+                  line-height: 14px;
+                }
+                span {
+                  font-size: 11px;
+                  line-height: 14px;
+                }
+              }
+              p {
+                font-size: 11px;
+                line-height: 14px;
+              }
+              span {
+                font-size: 11px;
+                line-height: 14px;
+              }
+              &:last-child {
+                label {
+                  svg {
+                    width: 15px;
+                    height: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &-pagination {
+        a {
+          padding: 4px 8px;
+          font-size: 11px;
+          line-height: 14px;
+          &:nth-child(4) {
+            display: none;
+          }
+          &:nth-child(6) {
+            display: none;
+          }
+        }
+        &-prev {
+          padding: 4px 8px;
+          span {
+            font-size: 11px;
+            line-height: 14px;
+          }
+          svg {
+            width: 8px;
+            height: 8px;
+          }
+        }
+        &-next {
+          padding: 4px 8px;
+          span {
+            font-size: 11px;
+            line-height: 14px;
+          }
+          svg {
+            width: 8px;
+            height: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+// 450px
+@mixin list-xsm-sm {
+}
+// 390px
+@mixin list-sm {
+  .list {
+    &__inner {
+     
+      &-pagination {
+        a {
+          padding: 3px 7px;
+          font-size: 11px;
+          line-height: 14px;
+        }
+        &-prev {
+          padding: 3px 7px;
+          svg {
+            width: 7px;
+            height: 7px;
+            margin-right: 5px;
+          }
+        }
+        &-next {
+          padding: 3px 7px;
+          svg {
+            width: 7px;
+            height: 7px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
